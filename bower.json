@@ -1,0 +1,26 @@
+{
+  "name": "tree_gen",
+  "description": "Tree (Data Structure) Generator",
+  "main": "index.js",
+  "authors": [
+    "Steven Gum <steven.gum@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "tree"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.0",
+    "angular-route": "^1.6.0",
+    "angular-messages": "^1.6.0"
+  }
+}

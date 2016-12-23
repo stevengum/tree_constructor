@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <div class="">
+        <h2>Input integers to construct a tree-type data structure.</h2>
+
+                <div class="row">
+                        <input type="number" ng-model="tree.Child0" ng-change="countNodes(tree)" class="col-md-12">
+                    </div>
+                <div ng-if="level2" ng-init="level2 = false">
+                    <div class="row">
+                        <input type="number" ng-model="tree.Child1" ng-change="countNodes(tree)" class="col-md-6">
+
+                        <input type="number" ng-model="tree.Child2" ng-change="countNodes(tree)" class="col-md-6">
+                        </div>
+                </div>
+                <!-- end second level -->
+
+            <div ng-if="level3" ng-init="level3 = false">
+                <div class="row">
+                    <input type="number" ng-model="tree.Child3" ng-change="countNodes(tree)" class="col-md-3" ng-disabled="!tree.Child1">
+
+                    <input type="number" ng-model="tree.Child4" ng-change="countNodes(tree)" class="col-md-3" ng-disabled="!tree.Child1">
+
+                    <input type="number" ng-model="tree.Child5" ng-change="countNodes(tree)" class="col-md-3" ng-disabled="!tree.Child2">
+
+                    <input type="number" ng-model="tree.Child6" ng-change="countNodes(tree)" class="col-md-3" ng-disabled="!tree.Child2">
+                </div>
+            </div><!-- end third level -->
+
+            <div ng-if="level4" ng-init="level4 = false">
+                <div class="row">
+                    <input type="number" ng-model="tree.Child7" ng-change="countNodes(tree)" class="col-md-1" ng-disabled="!tree.Child3">
+
+                    <input type="number" ng-model="tree.Child8" ng-change="countNodes(tree)" class="col-md-1" ng-disabled="!tree.Child3">
+
+                    <input type="number" ng-model="tree.Child9" ng-change="countNodes(tree)" class="col-md-1" ng-disabled="!tree.Child4">
+
+                    <input type="number" ng-model="tree.Child10" ng-change="countNodes(tree)" class="col-md-1" ng-disabled="!tree.Child4">
+
+                    <input type="number" ng-model="tree.Child11" ng-change="countNodes(tree)" class="col-md-1" ng-disabled="!tree.Child5">
+
+                    <input type="number" ng-model="tree.Child12" ng-change="countNodes(tree)" class="col-md-1" ng-disabled="!tree.Child5">
+
+                    <input type="number" ng-model="tree.Child13" ng-change="countNodes(tree)" class="col-md-1" ng-disabled="!tree.Child6">
+
+                    <input type="number" ng-model="tree.Child14" ng-change="countNodes(tree)" class="col-md-1" ng-disabled="!tree.Child6">
+                </div>
+            </div>
+
+            <div>
+                <button ng-click="logTree(tree)">Construct Tree</button>
+                <button ng-click="countNodes(tree)">Row update</button>
+                <div>
+                    <button ng-click="clearTree(tree)">Clear Tree (Not working)</button>
+                    <button ng-click="constructTree(tree)">experimental constructTree</button>
+                </div>
+            </div>
+            <div ng-if="showTree" ng-init="showTree = false">
+                {{ test }}
+                ShowTree is True
+
+            </div>
+
+    </div>
+</div>
